@@ -6,10 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="com.seleniumIlkProje" />
+        <module name="com.seleniumIlkProje1" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="com.seleniumIlkProje" target="16" />
-    </bytecodeTargetLevel>
   </component>
 </project>

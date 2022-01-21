@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class C04_CssSelector {
+
+
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "src/driver/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -15,16 +17,18 @@ public class C04_CssSelector {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         //  a. Verilen web sayfasına gidin. http://a.testaddressbook.com/sign_in
         driver.get("http://a.testaddressbook.com/sign_in");
-        //  b. Locate email textbox
+        //	b. Locate email textbox
         WebElement emailTextBox= driver.findElement(By.cssSelector("#session_email")); // xpath //input[@id='session_email']
-        //  c. Locate password textbox ve
+        //	c. Locate password textbox ve
         WebElement passwordTextBox=driver.findElement(By.cssSelector("input[placeholder='Password']")); //input[@id='session_password']
-        //  d. Locate signin button
+        //	d. Locate signin button
         WebElement signInButonu=driver.findElement(By.cssSelector("input[name='commit']"));// xpath //input[@name='commit']
-        //  e. Asagidaki kullanıcı adını ve şifreyi girin ve sign in düğmesini tıklayın
+        //	e. Asagidaki kullanıcı adını ve şifreyi girin ve sign in düğmesini tıklayın
         //
-        //      i. Username : testtechproed@gmail.com
-        //      ii. Password : Test1234!
+        //		i. Username : testtechproed@gmail.com
+        //		ii. Password : Test1234!
+
+
         emailTextBox.sendKeys("testtechproed@gmail.com");
         passwordTextBox.sendKeys("Test1234!");
         signInButonu.click();

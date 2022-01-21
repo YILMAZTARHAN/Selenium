@@ -1,5 +1,3 @@
-ines (9 sloc)  354 Bytes
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 

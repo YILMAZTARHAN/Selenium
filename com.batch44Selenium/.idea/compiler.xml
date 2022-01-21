@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="com.batch44Selenium" />
+        <module name="com.batch44Selenium1" />
       </profile>
     </annotationProcessing>
   </component>
