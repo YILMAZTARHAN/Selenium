@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -23,9 +24,10 @@ public class C04_DropDown {
 
     WebDriver driver;
     WebElement dropdownElementi;
+    WebElement aramaKutusu;
     Select select;
 
-    @BeforeMethod
+    @BeforeClass
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
@@ -54,7 +56,7 @@ public class C04_DropDown {
 
         select.selectByVisibleText("Books");
         //	2. Arama kutusuna Java yazin ve aratin
-        WebElement aramaKutusu=driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
+         aramaKutusu=driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
 
         aramaKutusu.sendKeys("Java" + Keys.ENTER);
         //	3. Bulunan sonuc sayisini yazdirin
