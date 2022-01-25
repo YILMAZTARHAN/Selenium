@@ -19,9 +19,10 @@ public class C03_SoftAssertion {
         softAssert.assertTrue(c>b,"4.test başarısız");//passed
         softAssert.assertTrue(c<a,"5.test başarısız");//failed
 
-        // assertAll demezsek class çalışır  ve passed yazar,çünkü aslında raporlama yapmaz sadece kodlar çalışmış olur
+        // assertAll demezsek class çalışır  ve passed yazar,çünkü aslında raporlama yapmaz sadece kodlar  çalışmış olur
         softAssert.assertAll();
         System.out.println("eğer softassert'lerden fail olan varsa bu satır çalışmaz");
 
+        //çalışır
     }
 }
