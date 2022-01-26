@@ -23,6 +23,6 @@ public class C03_SoftAssertion {
         softAssert.assertAll();
         System.out.println("eğer softassert'lerden fail olan varsa bu satır çalışmaz");
 
-        //çalışır
+
     }
 }
