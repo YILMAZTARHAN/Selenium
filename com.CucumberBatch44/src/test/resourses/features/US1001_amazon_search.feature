@@ -1,5 +1,6 @@
 Feature: US1001 amazon search
 
+    @para1
   Scenario: TC01_Amazon Search Testi
 
     Given kullanici amazon sayfasina gider

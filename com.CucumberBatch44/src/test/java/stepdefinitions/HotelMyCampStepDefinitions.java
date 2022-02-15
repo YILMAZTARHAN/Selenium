@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.HMCPage;
 import utilities.ConfigReader;
-import utilities.Driver;
 
 public class HotelMyCampStepDefinitions {
     HMCPage hmcPage=new HMCPage();
@@ -46,12 +45,12 @@ public class HotelMyCampStepDefinitions {
     }
 
 
-    @Then("scenario outline'dan kullanici adi olarak{string} yazar")
+    @Then("scenario outline'dan kullanici adi olarak {string} yazar")
     public void scenarioOutlineDanKullaniciAdiOlarakYazar(String username) {
         hmcPage.usernameTextBox.sendKeys(username);
     }
 
-    @And("scenario outline'dan password olarak{string} yazar")
+    @And("scenario outline'dan password olarak {string} yazar")
     public void scenarioOutlineDanPasswordOlarakYazar(String password) {
         hmcPage.passwordTextBox.sendKeys(password);
     }

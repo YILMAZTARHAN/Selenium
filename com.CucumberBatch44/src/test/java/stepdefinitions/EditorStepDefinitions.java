@@ -52,7 +52,7 @@ public class EditorStepDefinitions {
     }
     @Then("Start date olarak {string} yazar")
     public void start_date_olarak_yazar(String startDate) {
-        editorPage.dateBox.sendKeys(startDate + Keys.ENTER);
+        editorPage.dateBox.sendKeys(startDate );
 
     }
     @Then("Salary olarak {string} yazar")
