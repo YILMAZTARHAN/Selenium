@@ -21,13 +21,13 @@ public class EditorStepDefinitions {
 
     @Then("new butonuna basar")
     public void new_butonuna_basar() {
-        editorPage.newButonu.click();
+    editorPage.newButonu.click();
 
     }
     @Then("firstname olarak {string} yazar")
     public void firstname_olarak_yazar(String firstname) {
 
-        editorPage.firstNameBox.sendKeys(firstname);
+    editorPage.firstNameBox.sendKeys(firstname);
     }
     @Then("lastname olarak {string} yazar")
     public void lastname_olarak_yazar(String lastname) {
@@ -74,7 +74,7 @@ public class EditorStepDefinitions {
     @Then("isim bolumunde {string} oldugunu dogrular")
     public void isim_bolumunde_oldugunu_dogrular(String firstname) {
 
-        String sonucStr= editorPage.aramasonucuElement.getText();
+       String sonucStr= editorPage.aramasonucuElement.getText();
         Assert.assertTrue(sonucStr.contains(firstname));
 
     }

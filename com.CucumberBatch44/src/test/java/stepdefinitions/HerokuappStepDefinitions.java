@@ -8,27 +8,27 @@ import utilities.ReusableMethods;
 
 public class HerokuappStepDefinitions {
 
- HerokuappPage herokuappPage=new HerokuappPage();
+    HerokuappPage herokuappPage=new HerokuappPage();
 
- @When("Add Element butonuna basar")
- public void add_element_butonuna_basar() {
-  herokuappPage.addButonElement.click();
+    @When("Add Element butonuna basar")
+    public void add_element_butonuna_basar() {
+        herokuappPage.addButonElement.click();
 
- }
- @Then("Delete butonu gorununceye kadar bekler")
- public void delete_butonu_gorununceye_kadar_bekler() {
+    }
+    @Then("Delete butonu gorununceye kadar bekler")
+    public void delete_butonu_gorununceye_kadar_bekler() {
 
-  ReusableMethods.waitForVisibility(herokuappPage.deleteButonElement,20);
+        ReusableMethods.waitForVisibility(herokuappPage.deleteButonElement,20);
 
- }
- @Then("Delete butonunun gorundgunu test eder")
- public void delete_butonunun_gorundgunu_test_eder() {
-  Assert.assertTrue(herokuappPage.deleteButonElement.isDisplayed());
+    }
+    @Then("Delete butonunun gorundgunu test eder")
+    public void delete_butonunun_gorundgunu_test_eder() {
+        Assert.assertTrue(herokuappPage.deleteButonElement.isDisplayed());
 
- }
- @Then("Delete butonuna basarak butonu siler")
- public void delete_butonuna_basarak_butonu_siler() {
-  herokuappPage.deleteButonElement.click();
+    }
+    @Then("Delete butonuna basarak butonu siler")
+    public void delete_butonuna_basarak_butonu_siler() {
+        herokuappPage.deleteButonElement.click();
 
- }
+    }
 }

@@ -55,7 +55,7 @@ public class AmazonStepDefinitions {
     @Given("{string} icin arama yapar")
     public void icin_arama_yapar(String arananKelime) {
 
-        amazonPages.aramaKutusu.sendKeys(arananKelime + Keys.ENTER);
+      amazonPages.aramaKutusu.sendKeys(arananKelime + Keys.ENTER);
 
     }
     @Then("sonuclarin {string} icerdigini test eder")

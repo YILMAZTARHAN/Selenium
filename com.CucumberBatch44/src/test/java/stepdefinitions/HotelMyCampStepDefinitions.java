@@ -27,7 +27,7 @@ public class HotelMyCampStepDefinitions {
     }
     @Then("Login butonuna basar")
     public void login_butonuna_basar() {
-        hmcPage.loginButonu.click();
+    hmcPage.loginButonu.click();
 
     }
     @Then("basarili olarak giris yapildigini test eder")

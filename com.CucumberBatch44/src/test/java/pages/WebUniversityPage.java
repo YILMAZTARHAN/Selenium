@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class WebUniversityPage {
 
-    public WebUniversityPage(){
+   public WebUniversityPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(xpath = "(//div[@class='section-title'])[2]")

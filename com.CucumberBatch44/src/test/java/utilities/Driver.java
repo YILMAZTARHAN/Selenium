@@ -9,44 +9,42 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 
-
 public class Driver {
 
-   private Driver(){
+    private Driver(){
 
     }
 
-    private static  WebDriver  driver;
+    private static WebDriver  driver;
 
-    public  static WebDriver getDriver(){
+    public static WebDriver getDriver(){
 
 
-        if (driver==null){//bu if sayesinde kod çalışırken bir kere new keyword ile driver oluşturunca
-                          //diğer kullanumlarda new devreye girmeyecek
-         switch (ConfigReader.getProperty("browser")){
 
-             case "chrome":
-                 WebDriverManager.chromedriver().setup();
-                 driver=new ChromeDriver();
-                 break;
-             case "firefox":
-                 WebDriverManager.firefoxdriver().setup();
-                 driver=new FirefoxDriver();
-                 break;
-             case "opera":
-                 WebDriverManager.operadriver().setup();
-                 driver=new OperaDriver();
-                 break;
-             case "safari":
-                 WebDriverManager.safaridriver().setup();
-                 driver=new SafariDriver();
-                 break;
+        if(driver==null){   // bu if sayesinde kod calisirken bir kere new keyword ile driver olusturulaca
+                            // diger kullanimlarda new devreye girmeyecek
+            switch (ConfigReader.getProperty("browser")){
 
-             default:
-                 WebDriverManager.chromedriver().setup();
-                 driver=new ChromeDriver();
-
-         }
+                case "chrome":
+                    WebDriverManager.chromedriver().setup();
+                    driver=new ChromeDriver();
+                    break;
+                case "firefox":
+                    WebDriverManager.firefoxdriver().setup();
+                    driver=new FirefoxDriver();
+                    break;
+                case "opera":
+                    WebDriverManager.operadriver().setup();
+                    driver=new OperaDriver();
+                    break;
+                case "safari":
+                    WebDriverManager.safaridriver().setup();
+                    driver=new SafariDriver();
+                    break;
+                default:
+                    WebDriverManager.chromedriver().setup();
+                    driver=new ChromeDriver();
+            }
 
         }
 
@@ -56,10 +54,10 @@ public class Driver {
     }
 
     public static void closeDriver(){
-       if (driver!=null){
-           driver.quit();
-           driver=null;
-       }
+        if (driver!=null){
+            driver.quit();
+            driver=null;
+        }
 
     }
 }

@@ -25,7 +25,7 @@ public class WebUniversityStepDefinitions {
     @Given("Login Portal'a  tiklar")
     public void login_portal_a_tiklar() {
 
-        webUniversityPage.webUniversityLoginPortal.click();
+    webUniversityPage.webUniversityLoginPortal.click();
     }
     @Then("acilan Diger window'a gecer")
     public void acilan_diger_window_a_gecer() {
@@ -48,7 +48,7 @@ public class WebUniversityStepDefinitions {
     @Then("Popup'ta cikan yazinin {string} oldugunu test eder")
     public void popup_ta_cikan_yazinin_oldugunu_test_eder(String popUpYazi) {
         System.out.println(Driver.getDriver().switchTo().alert().getText());
-        String alertYazisi= Driver.getDriver().switchTo().alert().getText();
+       String alertYazisi= Driver.getDriver().switchTo().alert().getText();
         System.out.println(alertYazisi);
         Assert.assertEquals(popUpYazi,alertYazisi);
     }
